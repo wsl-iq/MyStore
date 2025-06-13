@@ -1,12 +1,69 @@
-- ### **Tool Hacking Guess Password Instagram**
+# Instagram Information & Brute-force Tool
+```
+HackInstagram
+```
+This Python script is designed to **gather detailed information** about an Instagram account and perform a simple **brute-force password attack** using a list of passwords provided in a `.txt` file.
 
 ---
 
-- **1- A** powerful tool of its kind where the user enters the **target username.**
-- **2-** When you enter the target username it displays information about the `account` to verify it.
-- **3-** When the basic information is displayed you agree to start the attack.
-- **4-** The **attack** is carried out by using the guessing method via a file named `passkey.txt`.
-- **5-** When a matching `password` is found, everything related to the account is displayed and the information is saved in a new file with the victim's username in `(*.txt) (*.json)` format.
+## Features
+
+- **Auto-detects system platform** (Windows, Linux, macOS)
+- **Detects user location** using `ip-api`
+- Shows a stylized banner with current **date and time**
+- Fetches Instagram account details using `instaloader`, including:
+  - Full name
+  - User ID
+  - Number of followers and followees
+  - IGTV count, post count
+  - Business category and external link
+  - Account status (private, verified, business, etc.)
+- Saves gathered info into both `.txt` and `.json` formats
+- Supports optional redirection to the Instagram profile in a **web browser**
+
+---
+
+## Password Attack
+
+- Uses a list of passwords from the file:  
+  \`passkey.txt\`
+
+- Attempts login through Instagram's endpoint:
+  \`https://www.instagram.com/accounts/login/ajax/\`
+
+- For each **password**, the script:
+  - Sends an **authenticated POST request**
+  - Waits for the response
+  - If successful, it **saves the credentials**
+  - If not, it continues to the next password
+
+- Displays real-time feedback with:
+  - `Trying password: ...`
+  - `Login successful` or `Not correct password`
+
+- After a successful login:
+  - Account data is saved to:
+    - \`<username>.txt\`
+    - \`<username>.json\`
+  - Additional account analysis is shown in a table
+
+---
+
+## Output Files
+
+- `TXT File`: Contains basic credentials and bio  
+- `JSON File`: Structured data for further use  
+- Example file names:  
+  - \`targetuser.txt\`  
+  - \`targetuser.json\`
+
+---
+
+## Notes
+
+- You can **cancel** the process anytime with `Ctrl + C`
+- If no correct password is found, the script will notify:
+  > `All passwords tested. No successful login!`
 
 ---
 
@@ -53,12 +110,5 @@
 
 ### **The price of the tool is**
 - ### **`9.99$`**
-
----
-
-### ![Connect](https://img.shields.io/badge/Connect_with_Developer-0056D2?style=for-the-badge&logo=links&logoColor=white)
-- [![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/wsl.iq)
-- [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/wsl-iq)
-- [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/wsl-iq)
 
 ---
