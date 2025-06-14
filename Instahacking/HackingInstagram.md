@@ -107,9 +107,8 @@ This Python script is designed to **gather detailed information** about an Insta
 | **Android**      | ![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white) | ✅ |
 
 ---
-
 ### **The price of the tool is**
-![image](money2.png)
+- <img src="money.jpg" alt="money" width="100">
 
 ---
 
