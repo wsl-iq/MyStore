@@ -109,7 +109,7 @@ This Python script is designed to **gather detailed information** about an Insta
 ---
 
 ### **The price of the tool is**
-- ### **`9.99$`**
+![image](money2.png)
 
 ---
 
